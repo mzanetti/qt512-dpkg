@@ -1,0 +1,31 @@
+Source: qt512xmlpatterns
+Section: libs
+Priority: extra
+Maintainer: Zoltán Balogh <zoltan@bakter.hu>
+Build-Depends: debhelper (>= 8.0.0),
+               autotools-dev, 
+               qt512base (>= 5.12.1-1nymea), 
+               libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf],
+               libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf],
+               libglib2.0-dev,
+               libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf],
+               libxrender-dev
+Standards-Version: 3.9.2
+Homepage: http://www.qt-project.org
+#Vcs-Git: git://git.debian.org/collab-maint/qtxmlpatterns.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/qtxmlpatterns.git;a=summary
+
+Package: qt512xmlpatterns
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Qt 5.12.1 XmlPatterns module
+ The QtXmlPatterns module provides support for XPath, XQuery, XSLT and XML Schema validation.
+
+Package: qt512xmlpatterns-dbg
+Architecture: amd64
+Section: debug
+Priority: extra
+Depends: qt512xmlpatterns (= ${binary:Version}), ${misc:Depends}
+Description: Debugging information for qt512xmlpatterns
+ This package contains the debugging symbols for qt512xmlpatterns module
+
